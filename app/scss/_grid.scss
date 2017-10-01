@@ -1,0 +1,31 @@
+
+
+// Build Grid 
+
+.row {
+	&:after,
+	&:before {
+		content:'';
+		clear: both;
+		width:100%;
+		display:table;
+	}
+}
+
+[class*="col-"]{
+	float:left; 
+	display:block;
+	min-height:.1rem;
+}
+
+$colNum : 24;
+
+@for $i from 1 through $colNum {
+
+	@include mediaQSM{
+		.col-sm-#{$i} { 
+			width: 100% / $colNum * $i;   	
+		}
+	}	        
+
+}

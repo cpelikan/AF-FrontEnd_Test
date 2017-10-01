@@ -1,0 +1,112 @@
+
+.no-scroll{overflow:hidden;}
+.push-right{float:right;}
+.push-left{float:left;}
+
+html, body{
+	 font: normal 100% "Trebuchet MS", "Arial"; 
+}
+
+body{
+	background: lighten($brandColor, 25%); overflow:hidden;color:$textDefault;
+}
+
+button{
+	padding:.3rem 1rem;
+	border-radius:.2rem;
+	background:darken($brandColor, 5%);
+	color:$white;
+	border:none;
+	font-weight:700;
+	font-variant:small-caps;
+	&:hover{
+		background:lighten($brandColor, 25%);
+		color:darken($brandColor, 5%); 
+		@include transition(all .3s ease-out);
+	}
+}
+
+a:hover{
+	@include transition(all .75s ease-out );
+}
+
+.head-wrap{
+	height:7vh;
+	background:$white;
+	border-bottom:solid .1rem lighten($brandColor, 25%);
+	//min-height:3rem;
+	.head{
+		@include edge-padder($sectionPadding);
+		position:relative;
+	}
+
+	.logo, .title-page{
+		color:$brandColor;
+		font-variant: small-caps;
+		font-weight: 900;
+		top:0;	
+		position:absolute;
+	}
+	.logo{
+		display:none;
+		right:0;
+		font-size:4rem;
+		line-height: 70%;
+		@include opacity(.05);
+		 @include mediaQSM {display:block;}
+	}
+	.title-page{
+		left:0;
+		font-size:2.3rem;
+		line-height: 120%;
+		@include opacity(.12);
+	}
+}
+
+.body-wrap{
+	height:86vh;
+	overflow:auto;
+	.body{
+		@include custom-scrollbar();
+		@include edge-padder($sectionPadding);
+	}
+}
+
+.engagement{
+	color:$white;
+	padding:.5rem 1rem;
+	text-align:center;
+	font-weight:300;
+}
+.heading{
+	background:$brandColor;
+	padding-bottom:.3rem;
+	h2{
+		font-size:1.2rem;
+		color:$white;
+		@include edge-padder(.5rem $sectionPadding .3rem $sectionPadding);
+	}
+
+	h3{
+		font-size:1rem;
+		color:$white;
+		@include edge-padder(0 $sectionPadding .5rem $sectionPadding);
+		font-weight:300;
+		font-style:italic;
+	}
+}
+
+.foot-wrap{
+	height:3rem;
+	background:$white;	
+	.foot{
+		@include edge-padder(.5rem $sectionPadding);
+
+		.push-left{
+			button{margin-right:2rem;}
+		}
+		.push-right{
+			text-align:right;
+		}
+	}
+}

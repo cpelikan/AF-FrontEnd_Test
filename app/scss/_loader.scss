@@ -1,0 +1,69 @@
+
+@-moz-keyframes throbber-loader {
+    0% {
+        opacity: 1
+    }
+    50% {
+        opacity: .2
+    }
+    100% {
+        opacity: 1
+    }
+}
+@-webkit-keyframes throbber-loader {
+    0% {
+        opacity: 1
+
+    }
+    50% {
+       opacity: .2
+    }
+    100% {
+        opacity: 1
+    }
+}
+@keyframes throbber-loader {
+    0% {
+        opacity: 1
+    }
+    50% {
+        opacity: .2
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+.throbber-loader {
+    -moz-animation: throbber-loader 1000ms 150ms infinite ease-out;
+    -webkit-animation: throbber-loader 1000ms 150ms infinite ease-out;
+    animation: throbber-loader 1000ms 150ms infinite ease-out;
+    background: $white;
+    display: inline-block;
+    position: relative;
+    width: .9rem;
+    height: 1.5rem;
+    margin: 0 1.6rem
+}
+.throbber-loader:before,
+.throbber-loader:after {
+    background: $white;
+    content:" ";
+    display: inline-block;
+    width: .9rem;
+    height: 1.5rem;
+    position: absolute;
+    top: 0
+}
+.throbber-loader:before {
+    -moz-animation: throbber-loader 1000ms 75ms infinite ease-out;
+    -webkit-animation: throbber-loader 1000ms 75ms infinite ease-out;
+    animation: throbber-loader 1000ms 75ms infinite ease-out;
+    left: -1.6rem
+}
+.throbber-loader:after {
+    -moz-animation: throbber-loader 1000ms 225ms infinite ease-out;
+    -webkit-animation: throbber-loader 1000ms 225ms infinite ease-out;
+    animation: throbber-loader 1000ms 225ms infinite ease-out;
+    right: -1.6rem
+}

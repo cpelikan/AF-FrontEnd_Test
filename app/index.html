@@ -1,0 +1,115 @@
+<!doctype html>
+
+<html lang="it">
+<head>
+	<meta charset="utf-8" />
+
+	<title></title>
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+
+	<!--build:css css/style.min.css-->
+	<link rel="stylesheet" href="css/style.css" />
+	<!--endbuild-->	
+
+	<!--build:js js/main.min.js -->
+	<script src="js/modal.js"></script>
+	<script src="js/intro.js"></script>
+	<script src="js/exercise.js"></script>
+	<script src="vendor/fabric.min.js"></script>
+	<!-- endbuild -->
+</head>
+
+<body class="no-scroll">
+
+	<header class="head-wrap">
+		<div class="head">
+			<span class="logo">Company Name</span>
+			<span class="title-page">Esercitazione</span>
+		</div>
+	</header>
+
+
+	<section class="body-wrap">
+		
+		<h1 class="engagement">Alla luce di quanto visto fin qui, mettiti alla prova con questa esercitazione</h1>
+		<div class="heading">
+			<h2>
+				Sapresti dire  quali delle affermazioni sulla pianificazione sono corrette?
+			</h2>
+			<h3>
+				Posiziona nell'ordine corretto le diverse fasi quindi  fai click su "Conferma"
+			</h3>
+		</div>
+
+		<div class="body">	
+			<div class="row">
+				<div class="col-xs-24 col-sm-12">
+					<ul id="list" class="list">
+						<li><a href="javascript:void(0)" draggable="true">Selezione di gruppo</a></li>
+						<li><a href="javascript:void(0)" draggable="true">Formazione IVASS</a></li>
+						<li><a href="javascript:void(0)" draggable="true">Conventions di reclutamento</a></li>
+						<li><a href="javascript:void(0)" draggable="true">Primo contatto</a></li>
+						<li><a href="javascript:void(0)" draggable="true">Colloqui di selezione in agenzia</a></li>
+						<li><a href="javascript:void(0)" draggable="true">Iscrizione al RUI</a></li>
+					</ul>
+
+				</div>
+				<div class="col-xs-24 col-sm-12 row">	
+
+					<div id="canvasContainer">
+						<canvas id="canvas" class="canvas" width="450" height="400"></canvas>
+					</div>
+
+				</div>
+				
+			</div>
+		</div>
+
+	</section>
+
+	<div class="modal-full open" id="introWrapper">
+		<a class="modal-close-btn" id="btnExitModal" href="#">Skip</a>
+		<div class="modal-content">			
+			<div class="video-wrap" id="videoWrap">
+				<div class="throbber-loader" id="videoLoader">&nbsp;</div>
+				<video height="300" id="intro" class="intro" controls autoplay>
+					 <source src="movie/19WorkingwiththeHTML5Canvas_Source.mp4" type="video/mp4" />
+					Questo video non è supportato, è ora di usare Chrome :P 
+				</video>	
+			</div>
+		</div>
+	</div>
+
+
+	<div class="modal-full" id="feedback">
+		<div class="modal-content">			
+			<span class="modal-title">Bravo!</span>
+			<span class="modal-message">Le hai tirate a indovinare ma le hai prese tutte!!!</span>
+		</div>
+	</div>
+
+	<div class="modal-full" id="warning">
+		<div class="modal-content">			
+			<span class="modal-title">Attenzione</span>
+			<span class="modal-message">Non hai finito l'esercitazione</span>
+			<button onclick="modalHandler.close('warning')">OK</button>
+		</div>
+	</div>
+
+
+	<footer class="foot-wrap">
+		<div class="foot row">
+			<div class="push-left">
+				<button id="btnResetExercise">Reimposta esercitazione</button>
+				<button id="btnReplayIntro">Riguarda il video</button>
+			</div>
+			<div class="push-right">
+				<button id="btnContinue">Continua</button>
+			</div>	
+		</div>
+	</footer>
+
+
+</body>
+</html>

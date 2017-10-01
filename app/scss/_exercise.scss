@@ -1,0 +1,60 @@
+.canvas-container{
+
+    @include mediaQSM {
+        float:right;
+    }
+
+    .canvas{
+        width:100%;
+        height: 600px;
+        
+        &.over {
+            border: .1rem dashed cyan;
+        }
+    }
+
+}
+
+
+.list{
+   font-size: 1rem; 
+   
+   margin-bottom:2rem;
+    @include mediaQSM {
+       margin-bottom:0;
+       padding-right:5rem;
+     }
+   li{
+    list-style:none;
+        display: inline-block;
+     @include mediaQSM {
+        display:block;
+     }
+
+    &:not(:last-child){
+        margin:0 0 1rem 0;
+    }
+    a{
+        display: block;
+        background:rgba($brandColor, .5);
+        padding:.92rem 1rem;
+        color:$white;
+        text-decoration: none;
+        border:solid .05rem rgba($white, .5);
+    }
+
+}
+.dragging {
+    opacity: 0.4;
+}
+}
+
+[draggable] {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    -khtml-user-drag: element;
+    -webkit-user-drag: element;
+    cursor: move;
+}
