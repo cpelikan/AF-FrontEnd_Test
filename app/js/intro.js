@@ -15,14 +15,12 @@ window.onload = function (){
 // add video listeners
 function initIntro(video){
 	
-	var isFirefox = detectFirefox();
-
 	video.addEventListener('ended',function(){
 		showContent(video);
 	}, false);
 	video.addEventListener('canplay', hideLoader, false);
 
-	if(isFirefox)
+	if(detectFirefox())
 		hideLoader();		
 
 }

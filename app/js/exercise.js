@@ -5,8 +5,6 @@ function initExercise(list, canvas){
 
   var Exercise = (function(list, canvasID){
 
-  var isFirefox = detectFirefox();
-
   //items can i put in canvas
   var choisesList = document.querySelectorAll('#'+list+" a");
 
@@ -59,7 +57,7 @@ function initExercise(list, canvas){
   function handleDragStart(evt) {
 
     // add property needed for firefox
-    if(isFirefox)
+    if(detectFirefox())
       evt.dataTransfer.setData('text/plain', evt.target.id);
 
     [].forEach.call(itemsList, function (item) {
