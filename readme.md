@@ -2,7 +2,7 @@ CONFIGURE
  -> "npm install"	
 
 RUN
- -> "gulp bild"
+ -> "gulp watch"
 
 BUILD
  ->	"gulp build"
