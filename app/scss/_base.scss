@@ -4,11 +4,16 @@
 .push-left{float:left;}
 
 html, body{
-	 font: normal 100% "Trebuchet MS", "Arial"; 
+	font: normal 100% "Trebuchet MS", "Arial"; 
+}
+
+html{
+	@include decoration-right();
 }
 
 body{
 	background: lighten($brandColor, 25%); overflow:hidden;color:$textDefault;
+	@include decoration-left();
 }
 
 button{
@@ -53,7 +58,7 @@ a:hover{
 		font-size:4rem;
 		line-height: 70%;
 		@include opacity(.05);
-		 @include mediaQSM {display:block;}
+		@include mediaQSM {display:block;}
 	}
 	.title-page{
 		left:0;

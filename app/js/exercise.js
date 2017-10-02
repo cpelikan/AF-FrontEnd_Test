@@ -96,26 +96,6 @@ function handleDrop(evt) {
 
   var item = document.querySelector('#list .dragging');
 
-  /*var newItem = new fabric.Textbox(item.innerHTML, {
-    left: evt.layerX,
-    top: evt.layerY,
-    fontFamily: 'Arial',
-    fontSize :20,
-    hasControls:false,
-    backgroundColor: '#FFF',
-    //lineHeight:100,
-    //hasBorders: false,
-    //hasCointrols: true,
-    //padding:0,
-    //borderColor:'#FFF',
-    fill: '#396781',
-    //width: item.offsetWidth
-    width: canvas.width-2
-  });
-
-  canvas.add(newItem);
-  */
-
   var bg = new fabric.Rect({
     fill: '#FFF',
     scaleY: 0.5,

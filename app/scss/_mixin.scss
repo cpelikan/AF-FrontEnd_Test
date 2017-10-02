@@ -10,11 +10,77 @@
 	padding:$padding;
 	max-width:1000px;
 	margin:0 auto;
+	position:relative;
+	z-index:1;
 }
 
 
 @mixin mediaQSM {
 	@media only screen and (min-width: $breackpointSM)  {
 		@content;
+	}
+}
+
+@mixin decoration-right(){
+	&:after{
+		content:'';
+		width: 0; 
+		height: 0; 
+		border-top: 18rem solid transparent;
+		border-bottom: 18rem solid transparent; 
+		border-right: 18rem solid rgba($white, .07);
+
+		position:absolute;
+		top:0;
+		right:10%;
+		z-index: 0;	
+
+		@include transform(rotate(90deg));
+
+	}
+
+	&:before{
+		content:'';
+		width:20rem;
+		height:20rem;
+		background: rgba($white, .08);
+		
+		@include transform(translate(-50%, -50%)  rotate(30deg));	
+		position:absolute;
+		bottom:10%;
+		left:50%;
+		z-index: 0;
+	}
+
+}
+
+@mixin decoration-left(){
+	&:after{
+		content:'';
+		width: 0; 
+		height: 0; 
+		border-top: 12rem solid transparent;
+		border-bottom: 12rem solid transparent; 
+		border-right: 12rem solid rgba($white, .07);
+
+		position:absolute;
+		top:25%;
+		left:10%;
+		z-index: 0;
+		@include transform(rotate(30deg));
+
+	}
+
+	&:before{
+		content:'';
+		width:12rem;
+		height:12rem;
+		background: rgba($white, .1);
+		border-radius:50%;
+
+		position:absolute;
+		top:10%;
+		left:5%;
+		z-index: 0;
 	}
 }
