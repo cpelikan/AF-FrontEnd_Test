@@ -1,6 +1,6 @@
 
 function initExercise(list, canvas){
-  exercise = new Exercise(list, canvas);
+  var exercise = new Exercise(list, canvas);
 }
 
   var Exercise = (function(list, canvasID){
